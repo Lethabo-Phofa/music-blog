@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import { LuMenu, LuNotebookPen, LuSearch, LuX } from "react-icons/lu";
 import MobileNavbar from "./MobileNavbar";
 import { useState } from "react";
+import { useModalStore } from "@/store/useModalStore";
 
 export const navLinks = [
   {url:"/", label:"Home"},
@@ -13,6 +14,7 @@ export const navLinks = [
 ]
 
 export default function Navbar() {
+const {openSignIn} = useModalStore();
 const [menuOpen, setMenuOpen] = useState(false); {/*this will keep the hamburger menu closed by default*/}
   return (
     <nav className="h-18 fixed top-0 left-0 z-50 backdrop-blur-md backdrop-saturate-50 w-full">
@@ -38,7 +40,7 @@ const [menuOpen, setMenuOpen] = useState(false); {/*this will keep the hamburger
               </li>
             )
           })}
-          <li className="bg-primary text-gray-200 px-3 lg:px-5 py-2 rounded-full cursor-pointer">Login</li>
+          <li onClick={openSignIn} className="bg-primary text-gray-200 px-3 lg:px-5 py-2 rounded-full cursor-pointer">Login</li>
           <li className="cursor-pointer md:hidden z-80" onClick={()=> setMenuOpen(!menuOpen)}>
             {menuOpen ? <LuX size={25}/>: <LuMenu size={25}/>}
             </li>
