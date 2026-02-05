@@ -25,9 +25,11 @@ const [menuOpen, setMenuOpen] = useState(false); {/*this will keep the hamburger
             <LuSearch size={25}/>
             <span className="hidden md:block ">Search</span>
           </li>
-          <li className="cursor-pointer flex items-center gap-1">
-            <LuNotebookPen size={20}/>
-            <span className="hidden md:block">Write</span>
+          <li >
+            <Link href="/write" className="cursor-pointer flex items-center gap-1">
+              <LuNotebookPen size={20}/>
+              <span className="hidden md:block">Write</span>
+            </Link>
           </li>
           {navLinks.map((link) => {
             return (

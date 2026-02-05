@@ -6,7 +6,7 @@ import React from 'react'
 export default function AboutPage() {
   return (
     <ContainerLayout>
-      <div className='px-4 sm:px-12'>
+      <div className='px-4 sm:px-12 mb-10'>
         {/** heading */}
         <div className='text-center mb-16'>
           <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4'>
