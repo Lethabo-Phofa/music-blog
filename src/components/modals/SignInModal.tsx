@@ -26,7 +26,6 @@ export default function SignInModal() {
 
         {/** github button */}
         <button className='w-full flex items-center justify-center gap-3 py-3 rounded-full cursor-pointer bg-hover text-white font-medium border border-white/10 hover:bg-[#202020] transition'>
-        <button className=''>
           <FaGithub className='text-xl'/>
         Continue with GitHub
         </button>

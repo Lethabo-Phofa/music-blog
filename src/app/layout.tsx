@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/general/navbar/Navbar";
 import Footer from "@/components/general/Footer";
 import SignInModal from "@/components/modals/SignInModal";
+import SearchModal from "@/components/modals/SearchModal";
 
 const poppins = Poppins({
   variable:"--font-poppins", 
@@ -30,6 +31,7 @@ export default function RootLayout({
         {children}
         <Footer/>
         <SignInModal/>
+        <SearchModal/>
       </body>
     </html>
   );

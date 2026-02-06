@@ -14,7 +14,7 @@ export const navLinks = [
 ]
 
 export default function Navbar() {
-const {openSignIn} = useModalStore();
+const {openSignIn, openSearch} = useModalStore();
 const [menuOpen, setMenuOpen] = useState(false); {/*this will keep the hamburger menu closed by default*/}
   return (
     <nav className="h-18 fixed top-0 left-0 z-50 backdrop-blur-md backdrop-saturate-50 w-full">
@@ -23,7 +23,7 @@ const [menuOpen, setMenuOpen] = useState(false); {/*this will keep the hamburger
         <Logo/>
         {/* navlinks */}
         <ul className="flex items-center gap-4 md:gap-8 text-gray-400 font-semibold">
-          <li className="cursor-pointer flex items-center gap-1">
+          <li onClick={openSearch} className="cursor-pointer flex items-center gap-1">
             <LuSearch size={25}/>
             <span className="hidden md:block ">Search</span>
           </li>
